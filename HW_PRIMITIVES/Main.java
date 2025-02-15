@@ -1,3 +1,5 @@
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
 
 public class Main {
@@ -51,11 +53,14 @@ public class Main {
             System.out.println("Ваш налог составит: " + taxEarnings + " рублей");
             System.out.println("Налог на другой системе: " + taxEarningsMinusSpendings + " рублей");
             System.out.println("Экономия: " + (taxEarningsMinusSpendings - taxEarnings) + " рублей");
-        } else {
+        } else if (taxEarningsMinusSpendings < taxEarnings) {
             System.out.println("\nМы советуем вам УСН доходы минус расходы");
             System.out.println("Ваш налог составит: " + taxEarningsMinusSpendings + " рублей");
             System.out.println("Налог на другой системе: " + taxEarnings + " рублей");
             System.out.println("Экономия: " + (taxEarnings - taxEarningsMinusSpendings) + " рублей");
+        } else {
+            System.out.println("\nМожете выбрать любую систему налогообложения");
+            System.out.println("Ваш налог по обеим системам составит: " + taxEarnings + " рублей");
         }
     }
 
