@@ -25,13 +25,13 @@ public class Main {
             int angle = Integer.parseInt(input);
             for (int i = 0; i < SIZE; i++) {
                 for (int j = 0; j < SIZE; j++) {
-                if(angle == 90) {
-                    rotatedColors[i][j] = colors[SIZE - j - 1][i];
-                } else if (angle == 180) {
-                    rotatedColors[i][j] = colors[SIZE - i - 1][SIZE - j - 1];
-                } else {
-                    rotatedColors[i][j] = colors[j][SIZE - i - 1];
-                }
+                    if (angle == 90) {
+                        rotatedColors[i][j] = colors[SIZE - j - 1][i];
+                    } else if (angle == 180) {
+                        rotatedColors[i][j] = colors[SIZE - i - 1][SIZE - j - 1];
+                    } else {
+                        rotatedColors[i][j] = colors[j][SIZE - i - 1];
+                    }
                 }
             }
             break;
