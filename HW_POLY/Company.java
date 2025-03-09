@@ -32,6 +32,7 @@ public class Company {
         for (int i = 0; i < deals.length; i++) {
             this.debit += deals[i].getDebitChange();
             this.credit += deals[i].getCreditChange();
+            System.out.println(deals[i].getComment());
         }
         int debit = this.debit;
         int credit = this.credit;

@@ -7,7 +7,6 @@ public class Deal {
         this.comment = comment;
         this.creditChange = creditChange;
         this.debitChange = debitChange;
-        System.out.println(comment);
     }
 
     public String getComment() {

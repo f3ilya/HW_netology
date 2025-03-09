@@ -25,7 +25,8 @@ public class Main {
                 new Sale("Банки с напитком", 5000)
         };
         printCompany(pepsi);
-        System.out.println("Разница между доходами и расходами составила: " + pepsi.applyDeals(deals) + " руб.");
+        System.out.println("Разница между доходами и расходами на момент оплаты налогов составила: " +
+                pepsi.applyDeals(deals) + " руб.");
     }
 
     public static void printCompany(Company company) {
