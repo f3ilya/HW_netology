@@ -68,7 +68,13 @@ public class Main {
         if (!list.isEmpty()) {
             System.out.println();
             System.out.print("Введите номер для удаления: ");
-            int index = Integer.parseInt(scanner.nextLine()) - 1;
+            int index;
+            try {
+                index = Integer.parseInt(scanner.nextLine()) - 1;
+            } catch (NumberFormatException e) {
+                System.out.println("Задача с таким номер не найдена! :(");
+                return;
+            }
             if (index >= 0 && index < list.size()) {
                 String str = list.remove(index);
                 if (!str.isEmpty()) {
