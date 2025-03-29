@@ -66,6 +66,16 @@ public class Main {
 
     public static void removeIndex(List<String> list, Scanner scanner) {
         if (!list.isEmpty()) {
+//            try {
+//                System.out.println();
+//                System.out.print("Введите номер для удаления: ");
+//                list.remove(Integer.parseInt(scanner.nextLine()) - 1);           1 вариант
+//            } catch (Exception e) {
+//                System.out.println("Задача с таким номер не найдена! :(");
+//                return;
+//            }
+//            System.out.println("Удалено!");
+            
             System.out.println();
             System.out.print("Введите номер для удаления: ");
             int index;
