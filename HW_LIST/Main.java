@@ -7,12 +7,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         List<String> list = new ArrayList<>();
 
-        while (true) {
+        do {
             printMenu();
-            if (inputValidation(list, scanner)) {
-                break;
-            }
-        }
+        } while (!inputValidation(list, scanner));
     }
 
     public static boolean inputValidation(List<String> list, Scanner scanner) {
@@ -69,15 +66,17 @@ public class Main {
 
     public static void removeIndex(List<String> list, Scanner scanner) {
         if (!list.isEmpty()) {
-            try {
-                System.out.println();
-                System.out.print("Введите номер для удаления: ");
-                list.remove(Integer.parseInt(scanner.nextLine()) - 1);
-            } catch (Exception e) {
-                System.out.println("Задача с таким номер не найдена! :(");
-                return;
+            System.out.println();
+            System.out.print("Введите номер для удаления: ");
+            int index = Integer.parseInt(scanner.nextLine()) - 1;
+            if (index >= 0 && index < list.size()) {
+                String str = list.remove(index);
+                if (!str.isEmpty()) {
+                    System.out.println("Удалено!");
+                    return;
+                }
             }
-            System.out.println("Удалено!");
+            System.out.println("Задача с таким номер не найдена! :(");
         }
     }
 
